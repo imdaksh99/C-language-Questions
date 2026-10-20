@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions | Programming Questions</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Programming Questions</h1>
+        <p>Practice by topic.</p>
+    </header>
+
+    <main class="page-container">
+        <a href="../index.html" class="back-link">&larr; Back to Home</a>
+
+        <h2 class="page-title">Functions</h2>
+        <p class="page-description">Functions questions will be added here.</p>
+
+        
+<section class="empty-box">
+    <h2>Functions Questions</h2>
+
+    <section id="questions">
+
+        <!-- Q1 -->
+        <details class="question">
+            <summary>Q1: Perform addition, subtraction, multiplication and division using functions</summary>
+            <div class="answer">
+                <h3>C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void add() {
+    int a, b;
+    printf("Enter two numbers for addition: ");
+    scanf("%d%d", &amp;a, &amp;b);
+    printf("Sum = %d\n", a + b);
+}
+
+void subtract() {
+    int a, b;
+    printf("Enter two numbers for subtraction: ");
+    scanf("%d%d", &amp;a, &amp;b);
+    printf("Difference = %d\n", a - b);
+}
+
+void multiply() {
+    int a, b;
+    printf("Enter two numbers for multiplication: ");
+    scanf("%d%d", &amp;a, &amp;b);
+    printf("Product = %d\n", a * b);
+}
+
+void divide() {
+    float a, b;
+    printf("Enter two numbers for division: ");
+    scanf("%f%f", &amp;a, &amp;b);
+
+    if (b != 0)
+        printf("Division = %.2f\n", a / b);
+    else
+        printf("Division by zero is not allowed\n");
+}
+
+void main() {
+    add();
+    subtract();
+    add();
+    multiply();
+    subtract();
+    multiply();
+    divide();
+    divide();
+    add();
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter two numbers for addition: 10 5
+Sum = 15
+Enter two numbers for subtraction: 10 5
+Difference = 5
+Enter two numbers for addition: 4 6
+Sum = 10
+Enter two numbers for multiplication: 3 4
+Product = 12
+Enter two numbers for subtraction: 9 2
+Difference = 7
+Enter two numbers for multiplication: 5 5
+Product = 25
+Enter two numbers for division: 10 2
+Division = 5.00
+Enter two numbers for division: 8 4
+Division = 2.00
+Enter two numbers for addition: 20 30
+Sum = 50</code></pre>
+            </div>
+        </details>
+
+        <!-- Q2 -->
+        <details class="question">
+            <summary>Q2: Enter 10 numbers, add them and display the answer</summary>
+            <div class="answer">
+                <h3>C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+int addNumbers() {
+    int n, i, sum = 0;
+
+    for (i = 1; i &lt;= 10; i++) {
+        printf("Enter number %d: ", i);
+        scanf("%d", &amp;n);
+        sum = sum + n;
+    }
+
+    return sum;
+}
+
+void main() {
+    int result;
+
+    result = addNumbers();
+
+    printf("Sum = %d", result);
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter number 1: 1
+Enter number 2: 2
+Enter number 3: 3
+Enter number 4: 4
+Enter number 5: 5
+Enter number 6: 6
+Enter number 7: 7
+Enter number 8: 8
+Enter number 9: 9
+Enter number 10: 10
+Sum = 55</code></pre>
+            </div>
+        </details>
+
+        <!-- Q3 -->
+        <details class="question">
+            <summary>Q3: Return an array from a function</summary>
+            <div class="answer">
+                <h3>C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+int *getArray() {
+    static int a[5];
+    int i;
+
+    printf("Enter 5 values: ");
+    for (i = 0; i &lt; 5; i++)
+        scanf("%d", &amp;a[i]);
+
+    return a;
+}
+
+void main() {
+    int *p, i;
+
+    p = getArray();
+
+    printf("Returned array: ");
+    for (i = 0; i &lt; 5; i++)
+        printf("%d ", p[i]);
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter 5 values: 10 20 30 40 50
+Returned array: 10 20 30 40 50</code></pre>
+                <p>Note: C directly returns an array nahi kar sakta. Is example mein function ek static array ka pointer return karta hai.</p>
+            </div>
+        </details>
+
+        <!-- Q4 -->
+        <details class="question">
+            <summary>Q4: Factorial, Reverse, Palindrome, Prime, Armstrong and Fibonacci using local and global variables</summary>
+            <div class="answer">
+                <h3>C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+int globalNumber = 5;
+
+void factorial() {
+    int i, fact = 1;
+    for (i = 1; i &lt;= globalNumber; i++)
+        fact *= i;
+    printf("Factorial = %d\n", fact);
+}
+
+void reverseNumber() {
+    int n = globalNumber, rev = 0;
+    while (n &gt; 0) {
+        rev = rev * 10 + n % 10;
+        n /= 10;
+    }
+    printf("Reverse = %d\n", rev);
+}
+
+void palindrome() {
+    int n = globalNumber, temp = n, rev = 0;
+    while (n &gt; 0) {
+        rev = rev * 10 + n % 10;
+        n /= 10;
+    }
+
+    if (temp == rev)
+        printf("Palindrome\n");
+    else
+        printf("Not palindrome\n");
+}
+
+void primeNumber() {
+    int i, prime = 1;
+
+    if (globalNumber &lt; 2)
+        prime = 0;
+
+    for (i = 2; i &lt; globalNumber; i++) {
+        if (globalNumber % i == 0)
+            prime = 0;
+    }
+
+    if (prime)
+        printf("Prime number\n");
+    else
+        printf("Not a prime number\n");
+}
+
+void armstrong() {
+    int n = globalNumber, temp = n;
+    int digit, sum = 0;
+
+    while (n &gt; 0) {
+        digit = n % 10;
+        sum += digit * digit * digit;
+        n /= 10;
+    }
+
+    if (sum == temp)
+        printf("Armstrong number\n");
+    else
+        printf("Not an Armstrong number\n");
+}
+
+void fibonacci() {
+    int a = 0, b = 1, c, i;
+
+    printf("Fibonacci: ");
+    for (i = 1; i &lt;= globalNumber; i++) {
+        printf("%d ", a);
+        c = a + b;
+        a = b;
+        b = c;
+    }
+    printf("\n");
+}
+
+void main() {
+    factorial();
+    reverseNumber();
+    palindrome();
+    primeNumber();
+    armstrong();
+    fibonacci();
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Factorial = 120
+Reverse = 5
+Palindrome
+Prime number
+Not an Armstrong number
+Fibonacci: 0 1 1 2 3</code></pre>
+                <p>Note: Is example mein global variable <code>globalNumber</code> ki value 5 hai aur har function ke andar local variables use kiye gaye hain. Number change karne ke liye global value update kar dena.</p>
+            </div>
+        </details>
+
+        <!-- Q5 -->
+        <details class="question">
+            <summary>Q5: Swap two numbers using call by address</summary>
+            <div class="answer">
+                <h3>C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void swap(int *a, int *b) {
+    int temp;
+
+    temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+void main() {
+    int x, y;
+
+    printf("Enter two numbers: ");
+    scanf("%d%d", &amp;x, &amp;y);
+
+    printf("Before swap: x=%d y=%d\n", x, y);
+
+    swap(&amp;x, &amp;y);
+
+    printf("After swap: x=%d y=%d", x, y);
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter two numbers: 10 20
+Before swap: x=10 y=20
+After swap: x=20 y=10</code></pre>
+            </div>
+        </details>
+
+        <!-- Q6 -->
+        <details class="question">
+            <summary>Q6: Swap numbers using a function</summary>
+            <div class="answer">
+                <h3>C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void swap(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+void main() {
+    int x, y;
+
+    printf("Enter two numbers: ");
+    scanf("%d%d", &amp;x, &amp;y);
+
+    swap(&amp;x, &amp;y);
+
+    printf("After swap: %d %d", x, y);
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter two numbers: 5 9
+After swap: 9 5</code></pre>
+                <p>Note: C mein normal arguments pass karne se original variables change nahi hote. Isliye function ko addresses diye gaye hain.</p>
+            </div>
+        </details>
+
+        <!-- Q7 -->
+        <details class="question">
+            <summary>Q7: Make a function to calculate the power of a number</summary>
+            <div class="answer">
+                <h3>C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+double power(double base, int exponent) {
+    double result = 1;
+    int i;
+
+    for (i = 1; i &lt;= exponent; i++)
+        result = result * base;
+
+    return result;
+}
+
+void main() {
+    double number;
+    int exponent;
+
+    printf("Enter number: ");
+    scanf("%lf", &amp;number);
+
+    printf("Enter non-negative power: ");
+    scanf("%d", &amp;exponent);
+
+    if (exponent &lt; 0) {
+        printf("Please enter a non-negative power");
+    } else {
+        printf("Result = %.2f",
+               power(number, exponent));
+    }
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter number: 2
+Enter non-negative power: 3
+Result = 8.00</code></pre>
+            </div>
+        </details>
+
+        <!-- Q8 -->
+        <details class="question">
+            <summary>Q8: Make a function to calculate the cube of a number</summary>
+            <div class="answer">
+                <h3>C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+int cube(int n) {
+    return n * n * n;
+}
+
+void main() {
+    int n;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;n);
+
+    printf("Cube = %d", cube(n));
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter a number: 4
+Cube = 64</code></pre>
+            </div>
+        </details>
+
+    </section>
+</section>
+
+    </main>
+
+    <footer class="footer">
+        <p>Programming Questions</p>
+    </footer>
+
+</body>
+</html>

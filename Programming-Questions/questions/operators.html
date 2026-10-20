@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators | Programming Questions</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="header">
+    <h1>Programming Questions</h1>
+    <p>Practice by topic.</p>
+</header>
+
+<main class="page-container">
+    <a href="../index.html" class="back-link">&larr; Back to Home</a>
+
+    <h2 class="page-title">Operators</h2>
+    <p class="page-description">Solved C programming questions on operators.</p>
+
+    <section class="empty-box">
+        <h2>Questions</h2>
+
+        <!-- Question 1 -->
+        <details class="question">
+            <summary>1. Example of Pre-Increment</summary>
+            <div class="answer">
+                <h3>C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main()
+{
+    int a = 5;
+
+    printf("Before increment = %d\n", a);
+    printf("Pre-increment = %d\n", ++a);
+    printf("After increment = %d\n", a);
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Before increment = 5
+Pre-increment = 6
+After increment = 6</code></pre>
+            </div>
+        </details>
+
+        <!-- Question 2 -->
+        <details class="question">
+            <summary>2. Example of Post-Increment</summary>
+            <div class="answer">
+                <h3>C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main()
+{
+    int a = 5;
+
+    printf("Before increment = %d\n", a);
+    printf("Post-increment = %d\n", a++);
+    printf("After increment = %d\n", a);
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Before increment = 5
+Post-increment = 5
+After increment = 6</code></pre>
+            </div>
+        </details>
+
+        <!-- Question 3 -->
+        <details class="question">
+            <summary>3. Example of Pre-Decrement</summary>
+            <div class="answer">
+                <h3>C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main()
+{
+    int a = 5;
+
+    printf("Before decrement = %d\n", a);
+    printf("Pre-decrement = %d\n", --a);
+    printf("After decrement = %d\n", a);
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Before decrement = 5
+Pre-decrement = 4
+After decrement = 4</code></pre>
+            </div>
+        </details>
+
+        <!-- Question 4 -->
+        <details class="question">
+            <summary>4. Example of Post-Decrement</summary>
+            <div class="answer">
+                <h3>C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main()
+{
+    int a = 5;
+
+    printf("Before decrement = %d\n", a);
+    printf("Post-decrement = %d\n", a--);
+    printf("After decrement = %d\n", a);
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Before decrement = 5
+Post-decrement = 5
+After decrement = 4</code></pre>
+            </div>
+        </details>
+
+        <!-- Question 5 -->
+        <details class="question">
+            <summary>5. Perform Addition, Subtraction, Multiplication, Division and Remainder</summary>
+            <div class="answer">
+                <h3>C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main()
+{
+    int a, b;
+
+    printf("Enter two numbers for addition: ");
+    scanf("%d%d", &amp;a, &amp;b);
+    printf("Addition = %d\n", a + b);
+
+    printf("\nEnter two numbers for subtraction: ");
+    scanf("%d%d", &amp;a, &amp;b);
+    printf("Subtraction = %d\n", a - b);
+
+    printf("\nEnter two numbers for multiplication: ");
+    scanf("%d%d", &amp;a, &amp;b);
+    printf("Multiplication = %d\n", a * b);
+
+    printf("\nEnter two numbers for division: ");
+    scanf("%d%d", &amp;a, &amp;b);
+
+    if (b != 0)
+        printf("Division = %.2f\n", (float)a / b);
+    else
+        printf("Division by zero is not allowed.\n");
+
+    printf("\nEnter two numbers for remainder: ");
+    scanf("%d%d", &amp;a, &amp;b);
+
+    if (b != 0)
+        printf("Remainder = %d\n", a % b);
+    else
+        printf("Remainder by zero is not allowed.\n");
+}</code></pre>
+                <h3>Sample Output</h3>
+                <pre><code>Enter two numbers for addition: 10 5
+Addition = 15
+
+Enter two numbers for subtraction: 10 5
+Subtraction = 5
+
+Enter two numbers for multiplication: 10 5
+Multiplication = 50
+
+Enter two numbers for division: 10 4
+Division = 2.50
+
+Enter two numbers for remainder: 10 3
+Remainder = 1</code></pre>
+            </div>
+        </details>
+
+        <!-- Question 6 -->
+        <details class="question">
+            <summary>6. Print the Last Digit of a Number</summary>
+            <div class="answer">
+                <h3>C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main()
+{
+    long long num;
+
+    printf("Enter a number: ");
+    scanf("%lld", &amp;num);
+
+    printf("Last digit = %lld\n", num % 10);
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter a number: 12345
+Last digit = 5</code></pre>
+                <p>Note: Negative numbers ke liye bhi last digit ka result negative aa sakta hai. Absolute last digit chahiye to sign handle karna padega.</p>
+            </div>
+        </details>
+
+        <!-- Question 7 -->
+        <details class="question">
+            <summary>7. Print the Right-Hand Side of a Decimal Point</summary>
+            <div class="answer">
+                <h3>C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main()
+{
+    float num;
+    int rightSide;
+
+    printf("Enter a decimal number: ");
+    scanf("%f", &amp;num);
+
+    rightSide = (int)(num * 10) % 10;
+
+    if (rightSide &lt; 0)
+        rightSide = -rightSide;
+
+    printf("First digit after decimal = %d\n", rightSide);
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter a decimal number: 45.67
+First digit after decimal = 6</code></pre>
+                <p>Ye program decimal point ke baad ka pehla digit print karta hai. Floating-point precision ki wajah se kuch numbers mein result alag ho sakta hai.</p>
+            </div>
+        </details>
+
+        <!-- Question 8 -->
+        <details class="question">
+            <summary>8. Find the Cube of a Number</summary>
+            <div class="answer">
+                <h3>C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main()
+{
+    int num, cube;
+
+    printf("Enter a number: ");
+    scanf("%d", &amp;num);
+
+    cube = num * num * num;
+
+    printf("Cube = %d\n", cube);
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter a number: 5
+Cube = 125</code></pre>
+            </div>
+        </details>
+
+        <!-- Question 9 -->
+        <details class="question">
+            <summary>9. Round Off a Float Number</summary>
+            <div class="answer">
+                <h3>C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main()
+{
+    float num;
+    int rounded;
+
+    printf("Enter a float number: ");
+    scanf("%f", &amp;num);
+
+    if (num &gt;= 0)
+        rounded = (int)(num + 0.5f);
+    else
+        rounded = (int)(num - 0.5f);
+
+    printf("Rounded number = %d\n", rounded);
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter a float number: 12.7
+Rounded number = 13</code></pre>
+            </div>
+        </details>
+
+        <!-- Question 10 -->
+        <details class="question">
+            <summary>10. Convert a Lowercase Character into Uppercase</summary>
+            <div class="answer">
+                <h3>C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main()
+{
+    char ch;
+
+    printf("Enter a lowercase character: ");
+    scanf(" %c", &amp;ch);
+
+    if (ch &gt;= 'a' &amp;&amp; ch &lt;= 'z')
+        ch = ch - 32;
+
+    printf("Uppercase character = %c\n", ch);
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter a lowercase character: r
+Uppercase character = R</code></pre>
+            </div>
+        </details>
+
+        <!-- Question 11 -->
+        <details class="question">
+            <summary>11. Calculate the Average of Student Marks</summary>
+            <div class="answer">
+                <h3>C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main()
+{
+    int m1, m2, m3;
+    float average;
+
+    printf("Enter marks of three subjects: ");
+    scanf("%d%d%d", &amp;m1, &amp;m2, &amp;m3);
+
+    average = (m1 + m2 + m3) / 3.0f;
+
+    printf("Average marks = %.2f\n", average);
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter marks of three subjects: 80 75 85
+Average marks = 80.00</code></pre>
+                <p>Is example mein 3 subjects hain. Subjects ki sankhya badalni ho to program ko uske hisaab se update kar sakte ho.</p>
+            </div>
+        </details>
+
+        <!-- Question 12 -->
+        <details class="question">
+            <summary>12. Calculate Simple Interest</summary>
+            <div class="answer">
+                <h3>C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main()
+{
+    float p, r, t, si;
+
+    printf("Enter principal amount: ");
+    scanf("%f", &amp;p);
+
+    printf("Enter rate of interest: ");
+    scanf("%f", &amp;r);
+
+    printf("Enter time in years: ");
+    scanf("%f", &amp;t);
+
+    si = (p * r * t) / 100.0f;
+
+    printf("Simple Interest = %.2f\n", si);
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter principal amount: 10000
+Enter rate of interest: 5
+Enter time in years: 2
+Simple Interest = 1000.00</code></pre>
+            </div>
+        </details>
+
+    </section>
+</main>
+
+<footer class="footer">
+    <p>Programming Questions</p>
+</footer>
+
+</body>
+</html>

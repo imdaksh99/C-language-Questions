@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays | Programming Questions</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Programming Questions</h1>
+        <p>Practice by topic.</p>
+    </header>
+
+    <main class="page-container">
+        <a href="../index.html" class="back-link">&larr; Back to Home</a>
+
+        <h2 class="page-title">Arrays</h2>
+        <p class="page-description">Arrays questions will be added here.</p>
+
+        
+<section class="empty-box">
+    <h2>Array Questions</h2>
+
+    <section id="questions">
+
+        <!-- Q1 -->
+        <details class="question">
+            <summary>Q1: Enter an array and display all values</summary>
+            <div class="answer">
+                <h3>Syntax / C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main() {
+    int a[5], i;
+
+    printf("Enter 5 values: ");
+    for (i = 0; i &lt; 5; i++)
+        scanf("%d", &amp;a[i]);
+
+    printf("Array values: ");
+    for (i = 0; i &lt; 5; i++)
+        printf("%d ", a[i]);
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter 5 values: 10 20 30 40 50
+Array values: 10 20 30 40 50</code></pre>
+            </div>
+        </details>
+
+        <!-- Q2 -->
+        <details class="question">
+            <summary>Q2: Print an array in reverse order</summary>
+            <div class="answer">
+                <h3>Syntax / C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main() {
+    int a[5], i;
+
+    printf("Enter 5 values: ");
+    for (i = 0; i &lt; 5; i++)
+        scanf("%d", &amp;a[i]);
+
+    printf("Reverse array: ");
+    for (i = 4; i &gt;= 0; i--)
+        printf("%d ", a[i]);
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter 5 values: 10 20 30 40 50
+Reverse array: 50 40 30 20 10</code></pre>
+            </div>
+        </details>
+
+        <!-- Q3 -->
+        <details class="question">
+            <summary>Q3: Copy an array into a second array</summary>
+            <div class="answer">
+                <h3>Syntax / C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main() {
+    int a[5], b[5], i;
+
+    printf("Enter 5 values: ");
+    for (i = 0; i &lt; 5; i++)
+        scanf("%d", &amp;a[i]);
+
+    for (i = 0; i &lt; 5; i++)
+        b[i] = a[i];
+
+    printf("Second array: ");
+    for (i = 0; i &lt; 5; i++)
+        printf("%d ", b[i]);
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter 5 values: 1 2 3 4 5
+Second array: 1 2 3 4 5</code></pre>
+            </div>
+        </details>
+
+        <!-- Q4 -->
+        <details class="question">
+            <summary>Q4: Copy an array into another array in reverse order</summary>
+            <div class="answer">
+                <h3>Syntax / C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main() {
+    int a[5], b[5], i;
+
+    printf("Enter 5 values: ");
+    for (i = 0; i &lt; 5; i++)
+        scanf("%d", &amp;a[i]);
+
+    for (i = 0; i &lt; 5; i++)
+        b[i] = a[4 - i];
+
+    printf("Reverse copied array: ");
+    for (i = 0; i &lt; 5; i++)
+        printf("%d ", b[i]);
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter 5 values: 10 20 30 40 50
+Reverse copied array: 50 40 30 20 10</code></pre>
+            </div>
+        </details>
+
+        <!-- Q5 -->
+        <details class="question">
+            <summary>Q5: Print even numbers from an array</summary>
+            <div class="answer">
+                <h3>Syntax / C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main() {
+    int a[5], i;
+
+    printf("Enter 5 values: ");
+    for (i = 0; i &lt; 5; i++)
+        scanf("%d", &amp;a[i]);
+
+    printf("Even numbers: ");
+    for (i = 0; i &lt; 5; i++) {
+        if (a[i] % 2 == 0)
+            printf("%d ", a[i]);
+    }
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter 5 values: 10 15 20 25 30
+Even numbers: 10 20 30</code></pre>
+            </div>
+        </details>
+
+        <!-- Q6 -->
+        <details class="question">
+            <summary>Q6: Print positive numbers from an array</summary>
+            <div class="answer">
+                <h3>Syntax / C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main() {
+    int a[5], i;
+
+    printf("Enter 5 values: ");
+    for (i = 0; i &lt; 5; i++)
+        scanf("%d", &amp;a[i]);
+
+    printf("Positive numbers: ");
+    for (i = 0; i &lt; 5; i++) {
+        if (a[i] &gt; 0)
+            printf("%d ", a[i]);
+    }
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter 5 values: -5 10 0 20 -2
+Positive numbers: 10 20</code></pre>
+            </div>
+        </details>
+
+        <!-- Q7 -->
+        <details class="question">
+            <summary>Q7: Find the square of all array values</summary>
+            <div class="answer">
+                <h3>Syntax / C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main() {
+    int a[5], i;
+
+    printf("Enter 5 values: ");
+    for (i = 0; i &lt; 5; i++)
+        scanf("%d", &amp;a[i]);
+
+    printf("Squares: ");
+    for (i = 0; i &lt; 5; i++)
+        printf("%d ", a[i] * a[i]);
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter 5 values: 1 2 3 4 5
+Squares: 1 4 9 16 25</code></pre>
+            </div>
+        </details>
+
+        <!-- Q8 -->
+        <details class="question">
+            <summary>Q8: Print odd numbers from 5 array values</summary>
+            <div class="answer">
+                <h3>Syntax / C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main() {
+    int a[5], i;
+
+    printf("Enter 5 values: ");
+    for (i = 0; i &lt; 5; i++)
+        scanf("%d", &amp;a[i]);
+
+    printf("Odd numbers: ");
+    for (i = 0; i &lt; 5; i++) {
+        if (a[i] % 2 != 0)
+            printf("%d ", a[i]);
+    }
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter 5 values: 10 15 20 25 30
+Odd numbers: 15 25</code></pre>
+            </div>
+        </details>
+
+        <!-- Q9 -->
+        <details class="question">
+            <summary>Q9: Add all 5 array values</summary>
+            <div class="answer">
+                <h3>Syntax / C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main() {
+    int a[5], i, sum = 0;
+
+    printf("Enter 5 values: ");
+    for (i = 0; i &lt; 5; i++) {
+        scanf("%d", &amp;a[i]);
+        sum = sum + a[i];
+    }
+
+    printf("Sum = %d", sum);
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter 5 values: 10 20 30 40 50
+Sum = 150</code></pre>
+            </div>
+        </details>
+
+        <!-- Q10 -->
+        <details class="question">
+            <summary>Q10: Search for a value in an array</summary>
+            <div class="answer">
+                <h3>Syntax / C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main() {
+    int a[5], i, n, found = 0;
+
+    printf("Enter 5 values: ");
+    for (i = 0; i &lt; 5; i++)
+        scanf("%d", &amp;a[i]);
+
+    printf("Enter value to search: ");
+    scanf("%d", &amp;n);
+
+    for (i = 0; i &lt; 5; i++) {
+        if (a[i] == n) {
+            found = 1;
+            break;
+        }
+    }
+
+    if (found == 1)
+        printf("Found");
+    else
+        printf("Not found");
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter 5 values: 10 20 30 40 50
+Enter value to search: 30
+Found</code></pre>
+            </div>
+        </details>
+
+        <!-- Q11 -->
+        <details class="question">
+            <summary>Q11: Sort five array values in ascending order</summary>
+            <div class="answer">
+                <h3>Syntax / C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main() {
+    int a[5], i, j, temp;
+
+    printf("Enter 5 values: ");
+    for (i = 0; i &lt; 5; i++)
+        scanf("%d", &amp;a[i]);
+
+    for (i = 0; i &lt; 4; i++) {
+        for (j = 0; j &lt; 4 - i; j++) {
+            if (a[j] &gt; a[j + 1]) {
+                temp = a[j];
+                a[j] = a[j + 1];
+                a[j + 1] = temp;
+            }
+        }
+    }
+
+    printf("Ascending order: ");
+    for (i = 0; i &lt; 5; i++)
+        printf("%d ", a[i]);
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter 5 values: 50 20 40 10 30
+Ascending order: 10 20 30 40 50</code></pre>
+            </div>
+        </details>
+
+        <!-- Q12 -->
+        <details class="question">
+            <summary>Q12: Find the maximum value in an array</summary>
+            <div class="answer">
+                <h3>Syntax / C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main() {
+    int a[5], i, max;
+
+    printf("Enter 5 values: ");
+    for (i = 0; i &lt; 5; i++)
+        scanf("%d", &amp;a[i]);
+
+    max = a[0];
+
+    for (i = 1; i &lt; 5; i++) {
+        if (a[i] &gt; max)
+            max = a[i];
+    }
+
+    printf("Maximum value: %d", max);
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter 5 values: 12 45 7 89 23
+Maximum value: 89</code></pre>
+            </div>
+        </details>
+
+        <!-- Q13 -->
+        <details class="question">
+            <summary>Q13: Find the minimum value in an array</summary>
+            <div class="answer">
+                <h3>Syntax / C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main() {
+    int a[5], i, min;
+
+    printf("Enter 5 values: ");
+    for (i = 0; i &lt; 5; i++)
+        scanf("%d", &amp;a[i]);
+
+    min = a[0];
+
+    for (i = 1; i &lt; 5; i++) {
+        if (a[i] &lt; min)
+            min = a[i];
+    }
+
+    printf("Minimum value: %d", min);
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter 5 values: 12 45 7 89 23
+Minimum value: 7</code></pre>
+            </div>
+        </details>
+
+    </section>
+</section>
+
+    </main>
+
+    <footer class="footer">
+        <p>Programming Questions</p>
+    </footer>
+
+</body>
+</html>

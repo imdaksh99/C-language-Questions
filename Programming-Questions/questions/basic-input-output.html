@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Input / Output | Programming Questions</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Programming Questions</h1>
+        <p>Practice by topic.</p>
+    </header>
+
+    <main class="page-container">
+        <a href="../index.html" class="back-link">&larr; Back to Home</a>
+
+        <h2 class="page-title">Basic Input / Output</h2>
+        <p class="page-description">Basic Input / Output questions will be added here.</p>
+
+        
+<section class="empty-box">
+    <h2>Basic Input / Output Questions</h2>
+
+    <section id="questions">
+
+        <!-- Q1 -->
+        <details class="question">
+            <summary>Q1: Print the message Today I made my first C Program.</summary>
+            <div class="answer">
+                <h3>Syntax / C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main() {
+    printf("Today I made my first C Program.");
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Today I made my first C Program.</code></pre>
+            </div>
+        </details>
+
+        <!-- Q2 -->
+        <details class="question">
+            <summary>Q2: Read a character from keyboard and display it</summary>
+            <div class="answer">
+                <h3>Syntax / C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main() {
+    char ch;
+
+    printf("Enter a character: ");
+    scanf("%c", &amp;ch);
+
+    printf("Character: %c", ch);
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter a character: A
+Character: A</code></pre>
+            </div>
+        </details>
+
+        <!-- Q3 -->
+        <details class="question">
+            <summary>Q3: Read only 4 characters and display each on a separate line</summary>
+            <div class="answer">
+                <h3>Syntax / C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main() {
+    char str[5];
+    int i;
+
+    printf("Enter 4 characters: ");
+    scanf("%4s", str);
+
+    for (i = 0; str[i] != '\0'; i++)
+        printf("%c\n", str[i]);
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter 4 characters: CODE
+C
+O
+D
+E</code></pre>
+                <p>Note: Is example mein 4 non-whitespace characters input liye jaate hain.</p>
+            </div>
+        </details>
+
+        <!-- Q4 -->
+        <details class="question">
+            <summary>Q4: Print your name at the center of the first line</summary>
+            <div class="answer">
+                <h3>Syntax / C Program (Turbo C)</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;string.h&gt;
+
+void main() {
+    char name[] = "Rahul";
+    int col;
+
+    clrscr();
+    col = (80 - strlen(name)) / 2 + 1;
+    gotoxy(col, 1);
+    printf("%s", name);
+
+    getch();
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>                 Rahul</code></pre>
+                <p>Note: Apna naam print karne ke liye "Rahul" ko change kar dena. Yeh Turbo C ke console functions use karta hai.</p>
+            </div>
+        </details>
+
+        <!-- Q5 -->
+        <details class="question">
+            <summary>Q5: Store and print a single quote character</summary>
+            <div class="answer">
+                <h3>Syntax / C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main() {
+    char ch = '\'';
+
+    printf("Character: %c", ch);
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Character: '</code></pre>
+            </div>
+        </details>
+
+        <!-- Q6 -->
+        <details class="question">
+            <summary>Q6: Print your name with blinking effect 5 times</summary>
+            <div class="answer">
+                <h3>Syntax / C Program (Turbo C)</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main() {
+    int i;
+
+    clrscr();
+
+    for (i = 0; i &lt; 5; i++) {
+        gotoxy(35, 12);
+        textcolor(WHITE);
+        cprintf("Rahul");
+        delay(500);
+
+        gotoxy(35, 12);
+        cprintf("     ");
+        delay(500);
+    }
+
+    gotoxy(35, 14);
+    printf("Blinking completed");
+    getch();
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Rahul (blinks 5 times)
+
+Blinking completed</code></pre>
+                <p>Note: Turbo C ke conio.h aur dos.h ki zaroorat hai. Modern compilers mein ye functions available nahi hote.</p>
+            </div>
+        </details>
+
+        <!-- Q7 -->
+        <details class="question">
+            <summary>Q7: Print your name at the center of the first line</summary>
+            <div class="answer">
+                <h3>Syntax / C Program (Turbo C)</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;string.h&gt;
+
+void main() {
+    char name[50];
+
+    clrscr();
+    printf("Enter your name: ");
+    scanf("%49s", name);
+
+    gotoxy((80 - strlen(name)) / 2 + 1, 1);
+    printf("%s", name);
+
+    getch();
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>            YourName</code></pre>
+            </div>
+        </details>
+
+        <!-- Q8 -->
+        <details class="question">
+            <summary>Q8: Display hello, welcome to c and delay for 5 seconds</summary>
+            <div class="answer">
+                <h3>Syntax / C Program (Turbo C)</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main() {
+    clrscr();
+
+    printf("hello,welcome to c");
+    delay(5000);
+
+    getch();
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>hello,welcome to c</code></pre>
+                <p>Note: Message 5 seconds tak screen par rahega. clrscr() aur delay() Turbo C-specific hain.</p>
+            </div>
+        </details>
+
+        <!-- Q9 -->
+        <details class="question">
+            <summary>Q9: Print your name at the center of the page</summary>
+            <div class="answer">
+                <h3>Syntax / C Program (Turbo C)</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;string.h&gt;
+
+void main() {
+    char name[] = "Rahul";
+    int col;
+
+    clrscr();
+
+    col = (80 - strlen(name)) / 2 + 1;
+    gotoxy(col, 12);
+    printf("%s", name);
+
+    getch();
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>
+
+
+
+                 Rahul
+</code></pre>
+                <p>Note: Console ki 25 lines mein line 12 approximately center hoti hai.</p>
+            </div>
+        </details>
+
+        <!-- Q10 -->
+        <details class="question">
+            <summary>Q10: Store and print a single quote on the output screen</summary>
+            <div class="answer">
+                <h3>Syntax / C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main() {
+    char singleQuote = '\'';
+
+    printf("%c", singleQuote);
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>'</code></pre>
+            </div>
+        </details>
+
+        <!-- Q11 -->
+        <details class="question">
+            <summary>Q11: Print your name with blinking effect 5 times</summary>
+            <div class="answer">
+                <h3>Syntax / C Program (Turbo C)</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+
+void main() {
+    int i;
+
+    clrscr();
+
+    for (i = 1; i &lt;= 5; i++) {
+        gotoxy(35, 12);
+        cprintf("Rahul");
+        delay(500);
+
+        gotoxy(35, 12);
+        cprintf("     ");
+        delay(500);
+    }
+
+    getch();
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Rahul (blinks 5 times)</code></pre>
+            </div>
+        </details>
+
+        <!-- Q12 -->
+        <details class="question">
+            <summary>Q12: Enter password and display it as asterisks</summary>
+            <div class="answer">
+                <h3>Syntax / C Program (Turbo C)</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main() {
+    char password[20];
+    char ch;
+    int i = 0;
+
+    printf("Enter password: ");
+
+    while (i &lt; 19) {
+        ch = getch();
+
+        if (ch == '\r')
+            break;
+
+        if (ch == '\b') {
+            if (i &gt; 0) {
+                i--;
+                printf("\b \b");
+            }
+        } else {
+            password[i++] = ch;
+            printf("*");
+        }
+    }
+
+    password[i] = '\0';
+
+    printf("\nPassword entered: %s", password);
+    getch();
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter password: ******
+Password entered: secret</code></pre>
+                <p>Note: Password ko dobara print karne wali line sirf demonstration ke liye hai. Real password input mein ise print nahi karna chahiye.</p>
+            </div>
+        </details>
+
+        <!-- Q13 -->
+        <details class="question">
+            <summary>Q13: Enter two characters and print their ASCII values</summary>
+            <div class="answer">
+                <h3>Syntax / C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main() {
+    char ch1, ch2;
+
+    printf("Enter first character: ");
+    scanf(" %c", &amp;ch1);
+
+    printf("Enter second character: ");
+    scanf(" %c", &amp;ch2);
+
+    printf("ASCII value of %c = %d\n", ch1,
+           (unsigned char)ch1);
+    printf("ASCII value of %c = %d\n", ch2,
+           (unsigned char)ch2);
+}</code></pre>
+                <h3>Output</h3>
+                <pre><code>Enter first character: A
+Enter second character: B
+ASCII value of A = 65
+ASCII value of B = 66</code></pre>
+            </div>
+        </details>
+
+        <!-- Q14 -->
+        <details class="question">
+            <summary>Q14: Print ASCII characters from 0 to 127</summary>
+            <div class="answer">
+                <h3>Syntax / C Program</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+void main() {
+    int i;
+
+    for (i = 0; i &lt;= 127; i++) {
+        printf("%3d : ", i);
+
+        if (i &lt; 32 || i == 127)
+            printf("Non-printable/control");
+        else
+            printf("%c", i);
+
+        printf("\n");
+    }
+}</code></pre>
+                <h3>Output (sample)</h3>
+                <pre><code>  0 : Non-printable/control
+  1 : Non-printable/control
+  2 : Non-printable/control
+...
+ 65 : A
+ 66 : B
+ 67 : C
+...
+127 : Non-printable/control</code></pre>
+                <p>Note: ASCII values 0–31 and 127 are control characters; they are not all printable symbols.</p>
+            </div>
+        </details>
+
+    </section>
+</section>
+
+    </main>
+
+    <footer class="footer">
+        <p>Programming Questions</p>
+    </footer>
+
+</body>
+</html>
