@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,145 +14,134 @@
     </header>
 
     <main class="page-container">
-        <a href="../index.html" class="back-link">&larr; Back to Home</a>
-
+        <a href="../index.html" class="back-link"><-Back to Home</a>
         <h2 class="page-title">Decision Control Structure</h2>
-        <p class="page-description">Decision Control Structure questions will be added here.</p>
 
-        
-<section class="empty-box">
-    <h2>Decision Control Structure Questions</h2>
+        <section>
+            <h2>Decision Control Structure Questions</h2>
 
-    <section id="questions">
-
-        <!-- Q1 -->
-        <details class="question">
-            <summary>Q1: Check whether a number is positive, negative or zero</summary>
-            <div class="answer">
-                <h3>C Program</h3>
-                <pre><code>#include &lt;stdio.h&gt;
+            <details class="question">
+                <summary>Q1: Check whether a number is positive, negative or zero</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>#include stdio.h
 
 void main() {
     int n;
     printf("Enter a number: ");
-    scanf("%d", &amp;n);
+    scanf("%d", &n);
 
-    if (n &gt; 0)
+    if (n > 0)
         printf("Positive number");
-    else if (n &lt; 0)
+    else if (n < 0)
         printf("Negative number");
     else
         printf("Zero");
 }</code></pre>
-                <h3>Output</h3>
-                <pre><code>Enter a number: -5
+                    <h3>Output</h3>
+                    <pre><code>Enter a number: -5
 Negative number</code></pre>
-            </div>
-        </details>
+                </div>
+            </details>
 
-        <!-- Q2 -->
-        <details class="question">
-            <summary>Q2: Check whether a number is odd or even</summary>
-            <div class="answer">
-                <h3>C Program</h3>
-                <pre><code>#include &lt;stdio.h&gt;
+            <details class="question">
+                <summary>Q2: Check whether a number is odd or even</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>#include stdio.h
 
 void main() {
     int n;
     printf("Enter a number: ");
-    scanf("%d", &amp;n);
+    scanf("%d", &n);
 
     if (n % 2 == 0)
         printf("Even number");
     else
         printf("Odd number");
 }</code></pre>
-                <h3>Output</h3>
-                <pre><code>Enter a number: 7
+                    <h3>Output</h3>
+                    <pre><code>Enter a number: 7
 Odd number</code></pre>
-            </div>
-        </details>
+                </div>
+            </details>
 
-        <!-- Q3 -->
-        <details class="question">
-            <summary>Q3: Check whether a number has 1, 2, 3, 4 or 5 digits</summary>
-            <div class="answer">
-                <h3>C Program</h3>
-                <pre><code>#include &lt;stdio.h&gt;
+            <details class="question">
+                <summary>Q3: Check whether a number has 1, 2, 3, 4 or 5 digits</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>#include stdio.h
 
 void main() {
     int n;
     long long x;
 
     printf("Enter a number: ");
-    scanf("%d", &amp;n);
+    scanf("%d", &n);
 
     x = n;
-    if (x &lt; 0)
+    if (x < 0)
         x = -x;
 
-    if (x &lt;= 9)
+    if (x <= 9)
         printf("1 digit");
-    else if (x &lt;= 99)
+    else if (x <= 99)
         printf("2 digits");
-    else if (x &lt;= 999)
+    else if (x <= 999)
         printf("3 digits");
-    else if (x &lt;= 9999)
+    else if (x <= 9999)
         printf("4 digits");
-    else if (x &lt;= 99999)
+    else if (x <= 99999)
         printf("5 digits");
     else
         printf("More than 5 digits");
 }</code></pre>
-                <h3>Output</h3>
-                <pre><code>Enter a number: 1234
+                    <h3>Output</h3>
+                    <pre><code>Enter a number: 1234
 4 digits</code></pre>
-            </div>
-        </details>
+                </div>
+            </details>
 
-        <!-- Q4 -->
-        <details class="question">
-            <summary>Q4: Calculate grade according to marks</summary>
-            <div class="answer">
-                <h3>C Program</h3>
-                <pre><code>#include &lt;stdio.h&gt;
+            <details class="question">
+                <summary>Q4: Calculate grade according to marks</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>#include stdio.h
 
 void main() {
     int marks;
     printf("Enter marks: ");
-    scanf("%d", &amp;marks);
+    scanf("%d", &marks);
 
-    if (marks &lt; 0 || marks &gt; 100)
+    if (marks < 0 || marks > 100)
         printf("Invalid marks");
-    else if (marks &lt; 40)
+    else if (marks < 40)
         printf("Fail");
-    else if (marks &lt; 60)
+    else if (marks < 60)
         printf("C Grade");
-    else if (marks &lt; 80)
+    else if (marks < 80)
         printf("B Grade");
     else
         printf("A Grade");
 }</code></pre>
-                <h3>Output</h3>
-                <pre><code>Enter marks: 75
+                    <h3>Output</h3>
+                    <pre><code>Enter marks: 75
 B Grade</code></pre>
-                <p>Ranges: 0–39 Fail, 40–59 C, 60–79 B, 80–100 A.</p>
-            </div>
-        </details>
+                </div>
+            </details>
 
-        <!-- Q5 -->
-        <details class="question">
-            <summary>Q5: Check whether a number is decimal or not</summary>
-            <div class="answer">
-                <h3>C Program</h3>
-                <pre><code>#include &lt;stdio.h&gt;
+            <details class="question">
+                <summary>Q5: Check whether a number is decimal or not</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>#include stdio.h
 
 void main() {
     double n;
     int whole;
 
     printf("Enter a number: ");
-    scanf("%lf", &amp;n);
+    scanf("%lf", &n);
 
     whole = (int)n;
 
@@ -162,99 +150,95 @@ void main() {
     else
         printf("Decimal value");
 }</code></pre>
-                <h3>Output</h3>
-                <pre><code>Enter a number: 12.5
+                    <h3>Output</h3>
+                    <pre><code>Enter a number: 12.5
 Decimal value</code></pre>
-            </div>
-        </details>
+                </div>
+            </details>
 
-        <!-- Q6 -->
-        <details class="question">
-            <summary>Q6: Convert negative to positive and positive to negative</summary>
-            <div class="answer">
-                <h3>C Program</h3>
-                <pre><code>#include &lt;stdio.h&gt;
+            <details class="question">
+                <summary>Q6: Convert negative to positive and positive to negative</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>#include stdio.h
 
 void main() {
     int n;
     printf("Enter a number: ");
-    scanf("%d", &amp;n);
+    scanf("%d", &n);
 
-    if (n &lt; 0)
+    if (n < 0)
         n = -n;
-    else if (n &gt; 0)
+    else if (n > 0)
         n = -n;
 
     printf("Result: %d", n);
 }</code></pre>
-                <h3>Output</h3>
-                <pre><code>Enter a number: 25
+                    <h3>Output</h3>
+                    <pre><code>Enter a number: 25
 Result: -25</code></pre>
-            </div>
-        </details>
+                </div>
+            </details>
 
-        <!-- Q7 -->
-        <details class="question">
-            <summary>Q7: Check whether a character is an alphabet</summary>
-            <div class="answer">
-                <h3>C Program</h3>
-                <pre><code>#include &lt;stdio.h&gt;
+            <details class="question">
+                <summary>Q7: Check whether a character is an alphabet</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>#include stdio.h
 
 void main() {
     char ch;
     printf("Enter a character: ");
-    scanf(" %c", &amp;ch);
+    scanf(" %c", &ch);
 
-    if ((ch &gt;= 'A' &amp;&amp; ch &lt;= 'Z') ||
-        (ch &gt;= 'a' &amp;&amp; ch &lt;= 'z'))
+    if ((ch >= 'A' && ch <= 'Z') ||
+        (ch >= 'a' && ch <= 'z'))
         printf("Alphabet");
     else
         printf("Not an alphabet");
 }</code></pre>
-                <h3>Output</h3>
-                <pre><code>Enter a character: G
+                    <h3>Output</h3>
+                    <pre><code>Enter a character: G
 Alphabet</code></pre>
-            </div>
-        </details>
+                </div>
+            </details>
 
-        <!-- Q8 -->
-        <details class="question">
-            <summary>Q8: If negative, square the number; if positive, add 20</summary>
-            <div class="answer">
-                <h3>C Program</h3>
-                <pre><code>#include &lt;stdio.h&gt;
+            <details class="question">
+                <summary>Q8: If negative, square the number; if positive, add 20</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>#include stdio.h
 
 void main() {
     int n;
     printf("Enter a number: ");
-    scanf("%d", &amp;n);
+    scanf("%d", &n);
 
-    if (n &lt; 0)
+    if (n < 0)
         printf("Square: %d", n * n);
-    else if (n &gt; 0)
+    else if (n > 0)
         printf("Result: %d", n + 20);
     else
         printf("Number is zero");
 }</code></pre>
-                <h3>Output</h3>
-                <pre><code>Enter a number: 10
+                    <h3>Output</h3>
+                    <pre><code>Enter a number: 10
 Result: 30</code></pre>
-            </div>
-        </details>
+                </div>
+            </details>
 
-        <!-- Q9 -->
-        <details class="question">
-            <summary>Q9: Check whether a number is decimal or not</summary>
-            <div class="answer">
-                <h3>C Program</h3>
-                <pre><code>#include &lt;stdio.h&gt;
+            <details class="question">
+                <summary>Q9: Check whether a number is decimal or not</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>#include stdio.h
 
 void main() {
     double n;
     int whole;
 
     printf("Enter a number: ");
-    scanf("%lf", &amp;n);
+    scanf("%lf", &n);
 
     whole = (int)n;
 
@@ -263,220 +247,211 @@ void main() {
     else
         printf("Decimal value");
 }</code></pre>
-                <h3>Output</h3>
-                <pre><code>Enter a number: 25
+                    <h3>Output</h3>
+                    <pre><code>Enter a number: 25
 Not a decimal value</code></pre>
-            </div>
-        </details>
+                </div>
+            </details>
 
-        <!-- Q10 -->
-        <details class="question">
-            <summary>Q10: Convert negative to positive and positive to negative</summary>
-            <div class="answer">
-                <h3>C Program</h3>
-                <pre><code>#include &lt;stdio.h&gt;
+            <details class="question">
+                <summary>Q10: Convert negative to positive and positive to negative</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>#include stdio.h
 
 void main() {
     int n;
     printf("Enter a number: ");
-    scanf("%d", &amp;n);
+    scanf("%d", &n);
 
-    if (n &lt; 0)
+    if (n < 0)
         n = -n;
-    else if (n &gt; 0)
+    else if (n > 0)
         n = -n;
 
     printf("Result: %d", n);
 }</code></pre>
-                <h3>Output</h3>
-                <pre><code>Enter a number: -15
+                    <h3>Output</h3>
+                    <pre><code>Enter a number: -15
 Result: 15</code></pre>
-            </div>
-        </details>
+                </div>
+            </details>
 
-        <!-- Q11 -->
-        <details class="question">
-            <summary>Q11: Check whether a character is an alphabet</summary>
-            <div class="answer">
-                <h3>C Program</h3>
-                <pre><code>#include &lt;stdio.h&gt;
+            <details class="question">
+                <summary>Q11: Check whether a character is an alphabet</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>#include stdio.h
 
 void main() {
     char ch;
     printf("Enter a character: ");
-    scanf(" %c", &amp;ch);
+    scanf(" %c", &ch);
 
-    if ((ch &gt;= 'A' &amp;&amp; ch &lt;= 'Z') ||
-        (ch &gt;= 'a' &amp;&amp; ch &lt;= 'z'))
+    if ((ch >= 'A' && ch <= 'Z') ||
+        (ch >= 'a' && ch <= 'z'))
         printf("Alphabet");
     else
         printf("Not an alphabet");
 }</code></pre>
-                <h3>Output</h3>
-                <pre><code>Enter a character: 5
+                    <h3>Output</h3>
+                    <pre><code>Enter a character: 5
 Not an alphabet</code></pre>
-            </div>
-        </details>
+                </div>
+            </details>
 
-        <!-- Q12 -->
-        <details class="question">
-            <summary>Q12: If negative, square the number; if positive, add 20</summary>
-            <div class="answer">
-                <h3>C Program</h3>
-                <pre><code>#include &lt;stdio.h&gt;
+            <details class="question">
+                <summary>Q12: If negative, square the number; if positive, add 20</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>#include stdio.h
 
 void main() {
     int n;
     printf("Enter a number: ");
-    scanf("%d", &amp;n);
+    scanf("%d", &n);
 
-    if (n &lt; 0)
+    if (n < 0)
         printf("Square: %d", n * n);
-    else if (n &gt; 0)
+    else if (n > 0)
         printf("Result: %d", n + 20);
     else
         printf("Number is zero");
 }</code></pre>
-                <h3>Output</h3>
-                <pre><code>Enter a number: -4
+                    <h3>Output</h3>
+                    <pre><code>Enter a number: -4
 Square: 16</code></pre>
-            </div>
-        </details>
+                </div>
+            </details>
 
-        <!-- Q13 -->
-        <details class="question">
-            <summary>Q13: Check whether a number is positive or negative</summary>
-            <div class="answer">
-                <h3>C Program</h3>
-                <pre><code>#include &lt;stdio.h&gt;
+            <details class="question">
+                <summary>Q13: Check whether a number is positive or negative</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>#include stdio.h
 
 void main() {
     int n;
     printf("Enter a number: ");
-    scanf("%d", &amp;n);
+    scanf("%d", &n);
 
-    if (n &gt; 0)
+    if (n > 0)
         printf("Positive number: %d", n);
-    else if (n &lt; 0)
+    else if (n < 0)
         printf("Negative number: %d", n);
     else
         printf("Zero");
 }</code></pre>
-                <h3>Output</h3>
-                <pre><code>Enter a number: -8
+                    <h3>Output</h3>
+                    <pre><code>Enter a number: -8
 Negative number: -8</code></pre>
-            </div>
-        </details>
+                </div>
+            </details>
 
-        <!-- Q14 -->
-        <details class="question">
-            <summary>Q14: Find the greater of two numbers</summary>
-            <div class="answer">
-                <h3>C Program</h3>
-                <pre><code>#include &lt;stdio.h&gt;
+            <details class="question">
+                <summary>Q14: Find the greater of two numbers</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>#include stdio.h
 
 void main() {
     int a, b;
     printf("Enter two numbers: ");
-    scanf("%d%d", &amp;a, &amp;b);
+    scanf("%d%d", &a, &b);
 
-    if (a &gt; b)
+    if (a > b)
         printf("Greater number: %d", a);
-    else if (b &gt; a)
+    else if (b > a)
         printf("Greater number: %d", b);
     else
         printf("Both are equal");
 }</code></pre>
-                <h3>Output</h3>
-                <pre><code>Enter two numbers: 25 40
+                    <h3>Output</h3>
+                    <pre><code>Enter two numbers: 25 40
 Greater number: 40</code></pre>
-            </div>
-        </details>
+                </div>
+            </details>
 
-        <!-- Q15 -->
-        <details class="question">
-            <summary>Q15: Check whether a number is divisible by 4</summary>
-            <div class="answer">
-                <h3>C Program</h3>
-                <pre><code>#include &lt;stdio.h&gt;
+            <details class="question">
+                <summary>Q15: Check whether a number is divisible by 4</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>#include stdio.h
 
 void main() {
     int n;
     printf("Enter a number: ");
-    scanf("%d", &amp;n);
+    scanf("%d", &n);
 
     if (n % 4 == 0)
         printf("Divisible by 4");
     else
         printf("Not divisible by 4");
 }</code></pre>
-                <h3>Output</h3>
-                <pre><code>Enter a number: 20
+                    <h3>Output</h3>
+                    <pre><code>Enter a number: 20
 Divisible by 4</code></pre>
-            </div>
-        </details>
+                </div>
+            </details>
 
-        <!-- Q16 -->
-        <details class="question">
-            <summary>Q16: Enter four characters and check whether all are equal</summary>
-            <div class="answer">
-                <h3>C Program</h3>
-                <pre><code>#include &lt;stdio.h&gt;
+            <details class="question">
+                <summary>Q16: Enter four characters and check whether all are equal</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>#include stdio.h
 
 void main() {
     char a, b, c, d;
 
     printf("Enter four characters: ");
-    scanf(" %c %c %c %c", &amp;a, &amp;b, &amp;c, &amp;d);
+    scanf(" %c %c %c %c", &a, &b, &c, &d);
 
-    if (a == b &amp;&amp; b == c &amp;&amp; c == d)
+    if (a == b && b == c && c == d)
         printf("All characters are equal");
     else
         printf("Characters are not equal");
 }</code></pre>
-                <h3>Output</h3>
-                <pre><code>Enter four characters: A A A A
+                    <h3>Output</h3>
+                    <pre><code>Enter four characters: A A A A
 All characters are equal</code></pre>
-            </div>
-        </details>
+                </div>
+            </details>
 
-        <!-- Q17 -->
-        <details class="question">
-            <summary>Q17: Find the greatest of three numbers</summary>
-            <div class="answer">
-                <h3>C Program</h3>
-                <pre><code>#include &lt;stdio.h&gt;
+            <details class="question">
+                <summary>Q17: Find the greatest of three numbers</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>#include stdio.h
 
 void main() {
     int a, b, c;
 
     printf("Enter three numbers: ");
-    scanf("%d%d%d", &amp;a, &amp;b, &amp;c);
+    scanf("%d%d%d", &a, &b, &c);
 
-    if (a &gt;= b &amp;&amp; a &gt;= c)
+    if (a >= b && a >= c)
         printf("Greatest: %d", a);
-    else if (b &gt;= a &amp;&amp; b &gt;= c)
+    else if (b >= a && b >= c)
         printf("Greatest: %d", b);
     else
         printf("Greatest: %d", c);
 }</code></pre>
-                <h3>Output</h3>
-                <pre><code>Enter three numbers: 10 25 15
+                    <h3>Output</h3>
+                    <pre><code>Enter three numbers: 10 25 15
 Greatest: 25</code></pre>
-            </div>
-        </details>
+                </div>
+            </details>
 
-        <!-- Q18 -->
-        <details class="question">
-            <summary>Q18: Display months according to the number of days</summary>
-            <div class="answer">
-                <h3>C Program</h3>
-                <pre><code>#include &lt;stdio.h&gt;
+            <details class="question">
+                <summary>Q18: Display months according to the number of days</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>#include stdio.h
 
 void main() {
     int days;
     printf("Enter number of days: ");
-    scanf("%d", &amp;days);
+    scanf("%d", &days);
 
     if (days == 30)
         printf("April, June, September, November");
@@ -487,23 +462,22 @@ void main() {
     else
         printf("Invalid");
 }</code></pre>
-                <h3>Output</h3>
-                <pre><code>Enter number of days: 30
+                    <h3>Output</h3>
+                    <pre><code>Enter number of days: 30
 April, June, September, November</code></pre>
-            </div>
-        </details>
+                </div>
+            </details>
 
-        <!-- Q19 -->
-        <details class="question">
-            <summary>Q19: Print a one-digit number in words</summary>
-            <div class="answer">
-                <h3>C Program</h3>
-                <pre><code>#include &lt;stdio.h&gt;
+            <details class="question">
+                <summary>Q19: Print a one-digit number in words</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>#include stdio.h
 
 void main() {
     int n;
     printf("Enter a digit (0-9): ");
-    scanf("%d", &amp;n);
+    scanf("%d", &n);
 
     if (n == 0) printf("Zero");
     else if (n == 1) printf("One");
@@ -517,77 +491,73 @@ void main() {
     else if (n == 9) printf("Nine");
     else printf("Invalid digit");
 }</code></pre>
-                <h3>Output</h3>
-                <pre><code>Enter a digit (0-9): 5
+                    <h3>Output</h3>
+                    <pre><code>Enter a digit (0-9): 5
 Five</code></pre>
-            </div>
-        </details>
+                </div>
+            </details>
 
-        <!-- Q20 -->
-        <details class="question">
-            <summary>Q20: Compare two characters and find their difference if unequal</summary>
-            <div class="answer">
-                <h3>C Program</h3>
-                <pre><code>#include &lt;stdio.h&gt;
+            <details class="question">
+                <summary>Q20: Compare two characters and find their difference if unequal</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>#include stdio.h
 
 void main() {
     char a, b;
 
     printf("Enter two characters: ");
-    scanf(" %c %c", &amp;a, &amp;b);
+    scanf(" %c %c", &a, &b);
 
     if (a == b)
         printf("Both characters are same");
     else
-        printf("Difference: %d",
-               (int)a - (int)b);
+        printf("Difference: %d", (int)a - (int)b);
 }</code></pre>
-                <h3>Output</h3>
-                <pre><code>Enter two characters: A C
+                    <h3>Output</h3>
+                    <pre><code>Enter two characters: A C
 Difference: -2</code></pre>
-            </div>
-        </details>
+                </div>
+            </details>
 
-        <!-- Q21 -->
-        <details class="question">
-            <summary>Q21: Find the greatest of three numbers</summary>
-            <div class="answer">
-                <h3>C Program</h3>
-                <pre><code>#include &lt;stdio.h&gt;
+            <details class="question">
+                <summary>Q21: Find the greatest of three numbers</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>#include stdio.h
 
 void main() {
     int a, b, c;
 
     printf("Enter three numbers: ");
-    scanf("%d%d%d", &amp;a, &amp;b, &amp;c);
+    scanf("%d%d%d", &a, &b, &c);
 
-    if (a &gt;= b &amp;&amp; a &gt;= c)
+    if (a >= b && a >= c)
         printf("Greatest: %d", a);
-    else if (b &gt;= a &amp;&amp; b &gt;= c)
+    else if (b >= a && b >= c)
         printf("Greatest: %d", b);
     else
         printf("Greatest: %d", c);
 }</code></pre>
-                <h3>Output</h3>
-                <pre><code>Enter three numbers: 5 9 3
+                    <h3>Output</h3>
+                    <pre><code>Enter three numbers: 5 9 3
 Greatest: 9</code></pre>
-            </div>
-        </details>
+                </div>
+            </details>
 
-        <!-- Q22 -->
-        <details class="question">
-            <summary>Q22: Print each digit of a two-digit number in words</summary>
-            <div class="answer">
-                <h3>C Program</h3>
-                <pre><code>#include &lt;stdio.h&gt;
+            <details class="question">
+                <summary>Q22: Print each digit of a two-digit number in words</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>#include stdio.h
 
 void main() {
     int n, tens, ones;
 
     printf("Enter a two-digit number: ");
-    scanf("%d", &amp;n);
+    scanf("%d", &n);
 
-    if (n &lt; 10 || n &gt; 99) {
+    if (n < 10 || n > 99) {
         printf("Invalid number");
     } else {
         tens = n / 10;
@@ -615,82 +585,79 @@ void main() {
         else if (ones == 9) printf("Nine");
     }
 }</code></pre>
-                <h3>Output</h3>
-                <pre><code>Enter a two-digit number: 50
+                    <h3>Output</h3>
+                    <pre><code>Enter a two-digit number: 50
 Five Zero</code></pre>
-            </div>
-        </details>
+                </div>
+            </details>
 
-        <!-- Q23 -->
-        <details class="question">
-            <summary>Q23: Check whether a character is uppercase, lowercase, a digit or a special character</summary>
-            <div class="answer">
-                <h3>C Program</h3>
-                <pre><code>#include &lt;stdio.h&gt;
+            <details class="question">
+                <summary>Q23: Check whether a character is uppercase, lowercase, a digit or a special character</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>#include stdio.h
 
 void main() {
     char ch;
     printf("Enter a character: ");
-    scanf(" %c", &amp;ch);
+    scanf(" %c", &ch);
 
-    if (ch &gt;= 'A' &amp;&amp; ch &lt;= 'Z')
+    if (ch >= 'A' && ch <= 'Z')
         printf("Uppercase alphabet");
-    else if (ch &gt;= 'a' &amp;&amp; ch &lt;= 'z')
+    else if (ch >= 'a' && ch <= 'z')
         printf("Lowercase alphabet");
-    else if (ch &gt;= '0' &amp;&amp; ch &lt;= '9')
+    else if (ch >= '0' && ch <= '9')
         printf("Number");
     else
         printf("Special character");
 }</code></pre>
-                <h3>Output</h3>
-                <pre><code>Enter a character: @
+                    <h3>Output</h3>
+                    <pre><code>Enter a character: @
 Special character</code></pre>
-            </div>
-        </details>
+                </div>
+            </details>
 
-        <!-- Q24 -->
-        <details class="question">
-            <summary>Q24: Check whether a year is a leap year</summary>
-            <div class="answer">
-                <h3>C Program</h3>
-                <pre><code>#include &lt;stdio.h&gt;
+            <details class="question">
+                <summary>Q24: Check whether a year is a leap year</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>#include stdio.h
 
 void main() {
     int year;
 
     printf("Enter year: ");
-    scanf("%d", &amp;year);
+    scanf("%d", &year);
 
     if (year % 400 == 0 ||
-        (year % 4 == 0 &amp;&amp; year % 100 != 0))
+        (year % 4 == 0 && year % 100 != 0))
         printf("Leap year");
     else
         printf("Not a leap year");
 }</code></pre>
-                <h3>Output</h3>
-                <pre><code>Enter year: 2024
+                    <h3>Output</h3>
+                    <pre><code>Enter year: 2024
 Leap year</code></pre>
-            </div>
-        </details>
+                </div>
+            </details>
 
-        <!-- Q25 -->
-        <details class="question">
-            <summary>Q25: Enter date, month and year and check whether the date is valid</summary>
-            <div class="answer">
-                <h3>C Program</h3>
-                <pre><code>#include &lt;stdio.h&gt;
+            <details class="question">
+                <summary>Q25: Enter date, month and year and check whether the date is valid</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>#include stdio.h
 
 void main() {
     int d, m, y, maxDays, leap;
 
     printf("Enter day month year: ");
-    scanf("%d%d%d", &amp;d, &amp;m, &amp;y);
+    scanf("%d%d%d", &d, &m, &y);
 
-    if (y &lt; 1 || m &lt; 1 || m &gt; 12) {
+    if (y < 1 || m < 1 || m > 12) {
         printf("Invalid date");
     } else {
         leap = (y % 400 == 0 ||
-               (y % 4 == 0 &amp;&amp; y % 100 != 0));
+                (y % 4 == 0 && y % 100 != 0));
 
         if (m == 2)
             maxDays = leap ? 29 : 28;
@@ -700,58 +667,57 @@ void main() {
         else
             maxDays = 31;
 
-        if (d &gt;= 1 &amp;&amp; d &lt;= maxDays)
+        if (d >= 1 && d <= maxDays)
             printf("Valid date");
         else
             printf("Invalid date");
     }
 }</code></pre>
-                <h3>Output</h3>
-                <pre><code>Enter day month year: 29 2 2024
+                    <h3>Output</h3>
+                    <pre><code>Enter day month year: 29 2 2024
 Valid date</code></pre>
-            </div>
-        </details>
+                </div>
+            </details>
 
-        <!-- Q26 -->
-        <details class="question">
-            <summary>Q26: Enter current date and DOB and calculate age difference</summary>
-            <div class="answer">
-                <h3>C Program</h3>
-                <pre><code>#include &lt;stdio.h&gt;
+            <details class="question">
+                <summary>Q26: Enter current date and DOB and calculate age difference</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>#include stdio.h
 
 void main() {
     int cd, cm, cy, bd, bm, by;
     int days, months, years;
 
     printf("Enter current day month year: ");
-    scanf("%d%d%d", &amp;cd, &amp;cm, &amp;cy);
+    scanf("%d%d%d", &cd, &cm, &cy);
 
     printf("Enter DOB day month year: ");
-    scanf("%d%d%d", &amp;bd, &amp;bm, &amp;by);
+    scanf("%d%d%d", &bd, &bm, &by);
 
-    if (cy &lt; by ||
-        (cy == by &amp;&amp; cm &lt; bm) ||
-        (cy == by &amp;&amp; cm == bm &amp;&amp; cd &lt; bd)) {
+    if (cy < by ||
+        (cy == by && cm < bm) ||
+        (cy == by && cm == bm && cd < bd)) {
         printf("Invalid dates");
     } else {
         years = cy - by;
         months = cm - bm;
         days = cd - bd;
 
-        if (days &lt; 0) {
+        if (days < 0) {
             months--;
+
             if (cm == 1 || cm == 3 || cm == 5 ||
                 cm == 7 || cm == 8 || cm == 10 ||
                 cm == 12)
                 days += 31;
-            else if (cm == 3) {
+            else if (cm == 3)
                 days += 28;
-            } else {
+            else
                 days += 30;
-            }
         }
 
-        if (months &lt; 0) {
+        if (months < 0) {
             years--;
             months += 12;
         }
@@ -760,31 +726,29 @@ void main() {
                years, months, days);
     }
 }</code></pre>
-                <h3>Output</h3>
-                <pre><code>Enter current day month year: 19 10 2026
+                    <h3>Output</h3>
+                    <pre><code>Enter current day month year: 19 10 2026
 Enter DOB day month year: 10 5 2001
 Age: 25 years, 5 months, 9 days</code></pre>
-                <p>Note: This is a basic age calculation example; exact calendar handling needs leap-year-aware month lengths and date validation.</p>
-            </div>
-        </details>
+                </div>
+            </details>
 
-        <!-- Q27 -->
-        <details class="question">
-            <summary>Q27: Calculate area and perimeter of a rectangle</summary>
-            <div class="answer">
-                <h3>C Program</h3>
-                <pre><code>#include &lt;stdio.h&gt;
+            <details class="question">
+                <summary>Q27: Calculate area and perimeter of a rectangle</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>#include stdio.h
 
 void main() {
     float length, breadth, area, perimeter;
 
     printf("Enter length: ");
-    scanf("%f", &amp;length);
+    scanf("%f", &length);
 
     printf("Enter breadth: ");
-    scanf("%f", &amp;breadth);
+    scanf("%f", &breadth);
 
-    if (length &lt; 0 || breadth &lt; 0) {
+    if (length < 0 || breadth < 0) {
         printf("Invalid dimensions");
     } else {
         area = length * breadth;
@@ -794,17 +758,15 @@ void main() {
         printf("Perimeter = %.2f", perimeter);
     }
 }</code></pre>
-                <h3>Output</h3>
-                <pre><code>Enter length: 10
+                    <h3>Output</h3>
+                    <pre><code>Enter length: 10
 Enter breadth: 5
 Area = 50.00
 Perimeter = 30.00</code></pre>
-            </div>
-        </details>
+                </div>
+            </details>
 
-    </section>
-</section>
-
+        </section>
     </main>
 
     <footer class="footer">
