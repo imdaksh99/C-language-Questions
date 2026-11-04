@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pointers | Programming Questions</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="page-container">
+            <h1 class="page-title">Pointers</h1>
+            <a class="back-link" href="../index.html"><-Back to home</a>
+            
+        </div>
+    </header>
+<main class="page-container">
+
+        <section class="question">
+            <p>Q1. Write user-entered data to a file</p>
+            <p>Enter a filename and data from the user, then write the data into the file.</p>
+            <div class="answer">
+                <h3>Solution</h3>
+                <pre><code>#include stdio.h
+
+void main()
+{
+    FILE *fp;
+    char filename[100];
+    char data[500];
+
+    printf("Enter filename: ");
+    scanf("%99s", filename);
+
+    printf("Enter data: ");
+    scanf(" %499[^\n]", data);
+
+    fp = fopen(filename, "w");
+
+    if (fp == NULL)
+    {
+        printf("Unable to open file.");
+        return;
+    }
+
+    fprintf(fp, "%s", data);
+    fclose(fp);
+
+    printf("Data written successfully.");
+}</code></pre>
+
+                <h3>Output</h3>
+                <pre><code>Enter filename: notes.txt
+Enter data: Hello World
+Data written successfully.</code></pre>
+                <p><strong>File content (notes.txt):</strong></p>
+                <pre><code>Hello World</code></pre>
+            </div>
+        </section>
+
+        <section class="question">
+            <p>Q2. Write data in capital letters</p>
+            <p>Enter a filename and data, convert the data to uppercase, and write it into the file.</p>
+            <div class="answer">
+                <h3>Solution</h3>
+                <pre><code>#include stdio.h
+
+void main()
+{
+    FILE *fp;
+    char filename[100];
+    char data[500];
+    int i;
+
+    printf("Enter filename: ");
+    scanf("%99s", filename);
+
+    printf("Enter data: ");
+    scanf(" %499[^\n]", data);
+
+    for (i = 0; data[i] != '\0'; i++)
+    {
+        data[i] = toupper((unsigned char)data[i]);
+    }
+
+    fp = fopen(filename, "w");
+
+    if (fp == NULL)
+    {
+        printf("Unable to open file.");
+        return;
+    }
+
+    fprintf(fp, "%s", data);
+    fclose(fp);
+
+    printf("Uppercase data written successfully.");
+}</code></pre>
+
+                <h3>Output</h3>
+                <pre><code>Enter filename: capital.txt
+Enter data: Hello World
+Uppercase data written successfully.</code></pre>
+                <p><strong>File content (capital.txt):</strong></p>
+                <pre><code>HELLO WORLD</code></pre>
+            </div>
+        </section>
+
+        <section class="question">
+            <p>Q3. Write data until the user chooses to stop</p>
+            <p>Enter a filename and keep accepting data until the user chooses to stop.</p>
+            <div class="answer">
+                <h3>Solution</h3>
+                <pre><code>#include stdio.h
+
+void main()
+{
+    FILE *fp;
+    char filename[100];
+    char data[500];
+    char choice;
+
+    printf("Enter filename: ");
+    scanf("%99s", filename);
+
+    fp = fopen(filename, "w");
+
+    if (fp == NULL)
+    {
+        printf("Unable to open file.");
+        return;
+    }
+
+    do
+    {
+        printf("Enter data: ");
+        scanf(" %499[^\n]", data);
+
+        fprintf(fp, "%s\n", data);
+
+        printf("Do you want to enter more data? (y/n): ");
+        scanf(" %c", &choice);
+
+    } while (choice == 'y' || choice == 'Y');
+
+    fclose(fp);
+
+    printf("Data written successfully.");
+}</code></pre>
+
+                <h3>Output</h3>
+                <pre><code>Enter filename: diary.txt
+Enter data: First line
+Do you want to enter more data? (y/n): y
+Enter data: Second line
+Do you want to enter more data? (y/n): n
+Data written successfully.</code></pre>
+                <p><strong>File content (diary.txt):</strong></p>
+                <pre><code>First line
+Second line</code></pre>
+            </div>
+        </section>
+
+        <section class="question">
+            <p>Q4. Copy one file into another</p>
+            <p>Enter source and destination filenames, then copy the source file into the destination file.</p>
+            <div class="answer">
+                <h3>Solution</h3>
+                <pre><code>#include stdio.h
+
+void main()
+{
+    FILE *source, *destination;
+    char sourceName[100];
+    char destinationName[100];
+    int ch;
+
+    printf("Enter source filename: ");
+    scanf("%99s", sourceName);
+
+    printf("Enter destination filename: ");
+    scanf("%99s", destinationName);
+
+    source = fopen(sourceName, "r");
+
+    if (source == NULL)
+    {
+        printf("Unable to open source file.");
+        return;
+    }
+
+    destination = fopen(destinationName, "w");
+
+    if (destination == NULL)
+    {
+        printf("Unable to open destination file.");
+        fclose(source);
+        return;
+    }
+
+    while ((ch = fgetc(source)) != EOF)
+    {
+        fputc(ch, destination);
+    }
+
+    fclose(source);
+    fclose(destination);
+
+    printf("File copied successfully.");
+}</code></pre>
+
+                <h3>Output</h3>
+                <pre><code>Enter source filename: notes.txt
+Enter destination filename: copy.txt
+File copied successfully.</code></pre>
+                <p><strong>File content (copy.txt):</strong></p>
+                <pre><code>Hello World</code></pre>
+            </div>
+        </section>
+
+        <section class="question">
+            <p>Q5. Rename a file</p>
+            <p>Enter a filename and data, write the data into the file, then rename the file.</p>
+            <div class="answer">
+                <h3>Solution</h3>
+                <pre><code>#include stdio.h
+
+void main()
+{
+    FILE *fp;
+    char filename[100];
+    char newFilename[100];
+    char data[500];
+
+    printf("Enter filename: ");
+    scanf("%99s", filename);
+
+    printf("Enter data: ");
+    scanf(" %499[^\n]", data);
+
+    fp = fopen(filename, "w");
+
+    if (fp == NULL)
+    {
+        printf("Unable to open file.");
+        return;
+    }
+
+    fprintf(fp, "%s", data);
+    fclose(fp);
+
+    printf("Enter new filename: ");
+    scanf("%99s", newFilename);
+
+    if (rename(filename, newFilename) == 0)
+    {
+        printf("File renamed successfully.");
+    }
+    else
+    {
+        printf("Unable to rename file.");
+    }
+}</code></pre>
+
+                <h3>Output</h3>
+                <pre><code>Enter filename: old.txt
+Enter data: Sample text
+Enter new filename: new.txt
+File renamed successfully.</code></pre>
+                <p><strong>File content (new.txt):</strong></p>
+                <pre><code>Sample text</code></pre>
+            </div>
+        </section>
+
+        <section class="question">
+            <p>Q6. Count characters in a file</p>
+            <p>Enter a filename and count the characters present in the file.</p>
+            <div class="answer">
+                <h3>Solution</h3>
+                <pre><code>#include stdio.h
+
+void main()
+{
+    FILE *fp;
+    char filename[100];
+    int ch;
+    int count = 0;
+
+    printf("Enter filename: ");
+    scanf("%99s", filename);
+
+    fp = fopen(filename, "r");
+
+    if (fp == NULL)
+    {
+        printf("Unable to open file.");
+        return;
+    }
+
+    while ((ch = fgetc(fp)) != EOF)
+    {
+        count++;
+    }
+
+    fclose(fp);
+
+    printf("Number of characters: %d", count);
+}</code></pre>
+
+                <h3>Output</h3>
+                <pre><code>Enter filename: notes.txt
+Number of characters: 11</code></pre>
+                <p>Here, <code>notes.txt</code> contains <code>Hello World</code>, which has 11 characters including the space.</p>
+            </div>
+        </section>
+
+        <section class="question">
+            <p>Q7. Concatenate two files into a third file</p>
+            <p>Enter two source filenames and a third filename, then combine the contents of the first two files into the third file.</p>
+            <div class="answer">
+                <h3>Solution</h3>
+                <pre><code>#include stdio.h
+
+void main()
+{
+    FILE *file1, *file2, *file3;
+    char name1[100];
+    char name2[100];
+    char name3[100];
+    int ch;
+
+    printf("Enter first filename: ");
+    scanf("%99s", name1);
+
+    printf("Enter second filename: ");
+    scanf("%99s", name2);
+
+    printf("Enter destination filename: ");
+    scanf("%99s", name3);
+
+    file1 = fopen(name1, "r");
+
+    if (file1 == NULL)
+    {
+        printf("Unable to open first file.");
+        return;
+    }
+
+    file2 = fopen(name2, "r");
+
+    if (file2 == NULL)
+    {
+        printf("Unable to open second file.");
+        fclose(file1);
+        return;
+    }
+
+    file3 = fopen(name3, "w");
+
+    if (file3 == NULL)
+    {
+        printf("Unable to open destination file.");
+        fclose(file1);
+        fclose(file2);
+        return;
+    }
+
+    while ((ch = fgetc(file1)) != EOF)
+    {
+        fputc(ch, file3);
+    }
+
+    while ((ch = fgetc(file2)) != EOF)
+    {
+        fputc(ch, file3);
+    }
+
+    fclose(file1);
+    fclose(file2);
+    fclose(file3);
+
+    printf("Files concatenated successfully.");
+}</code></pre>
+
+                <h3>Output</h3>
+                <pre><code>Enter first filename: first.txt
+Enter second filename: second.txt
+Enter destination filename: combined.txt
+Files concatenated successfully.</code></pre>
+                <p><strong>File content (first.txt):</strong></p>
+                <pre><code>Hello </code></pre>
+                <p><strong>File content (second.txt):</strong></p>
+                <pre><code>World</code></pre>
+                <p><strong>File content (combined.txt):</strong></p>
+                <pre><code>Hello World</code></pre>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="page-container">
+            <p>Programming Questions</p>
+        </div>
+    </footer>
+</body>
+</html>

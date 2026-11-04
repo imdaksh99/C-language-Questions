@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pointers | Programming Questions</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="page-container">
+            <h1 class="page-title">Pointers</h1>
+            <a class="back-link" href="../index.html"><-Back to home</a>
+            
+        </div>
+    </header>
+
+    <main class="page-container">
+        <section class="question">
+            <p>Q1:Write a program in which a pointer points to an array.
+                Fill all array locations with values entered by the user
+                through the pointer, then print the array.
+            </p>
+
+            <div class="answer">
+                <pre><code>#include stdio.h
+
+void main()
+{
+    int arr[5];
+    int *ptr = arr;
+    int i;
+
+    printf("Enter 5 elements:\n");
+
+    for (i = 0; i  5; i++)
+    {
+        scanf("%d", ptr + i);
+    }
+
+    printf("Array elements are:\n");
+
+    for (i = 0; i < 5; i++)
+    {
+        printf("%d ", *(ptr + i));
+    }
+}</code></pre>
+            </div>
+        </section>
+
+        <section class="question">
+            <p>Q2: Write a program with a 2D array of size 2 by 3.
+                Insert values through a pointer and print the values.
+            </p>
+
+            <div class="answer">
+                <h3>Solution</h3>
+                <pre><code>#include stdio.h
+
+void main()
+{
+    int arr[2][3];
+    int *ptr = &arr[0][0];
+    int i, j;
+
+    printf("Enter 6 elements:\n");
+
+    for (i = 0; i < 6; i++)
+    {
+        scanf("%d", ptr + i);
+    }
+
+    printf("2D array elements are:\n");
+
+    for (i = 0; i < 2; i++)
+    {
+        for (j = 0; j < 3; j++)
+        {
+            printf("%d ", *(ptr + i * 3 + j));
+        }
+        printf("\n");
+    }
+}</code></pre>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="page-container">
+            <p>Programming Questions</p>
+        </div>
+    </footer>
+</body>
+</html>
