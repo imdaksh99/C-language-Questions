@@ -24,8 +24,96 @@
 
         <section class="empty-box">
             <h2>Questions</h2>
-            <p>Questions will be added soon.</p>
+            <summary>Q1: Write a program of recursion and display the output.</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>
+                        #include stdio.h
+#include conio.h
+#include dos.h
+int x=1;
+void fun()
+{
+if(x==5)
+{
+printf("%d",x);
+x++;
+fun();
+}
+printf("A");
+}
+void main()
+{
+clrscr();
+fun();
+delay(3000);
+}
+</code></pre>
+<h3>Output</h3>
+<pre><code>12345AAAAAA </code></pre>
+</div>
+</details>
         </section>
+
+        <summary>Q2: Write a program of recursion with global variable and display the output.</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>
+#include stdio.h
+#include conio.h
+#include dos.h
+int x=1;
+void fun()
+{
+if(x==5)
+{
+printf("%d",x);
+x++;
+fun();
+}
+}
+void main()
+{
+clrscr();
+fun();
+delay(3000);
+}
+</code></pre>
+<h3>Output</h3>
+<pre><code>12345 </code></pre>
+    </div>
+            </details>
+        </section>
+
+        <summary>Q3: Write a program of recursion with local variable and display the output.</summary>
+                <div class="answer">
+                    <h3>C Program</h3>
+                    <pre><code>
+#include stdio.h
+#include conio.h
+#include dos.h
+void fun(int x)
+{
+if(x==5)
+{
+x++;
+fun(x);
+printf("%d",x);
+}
+}
+void main()
+{
+clrscr();
+fun();
+delay(3000);
+}
+</code></pre>
+<h3>Output</h3>
+<pre><code>65432 </code></pre>
+    </div>
+            </details>
+        </section>
+
 
     </main>
 
